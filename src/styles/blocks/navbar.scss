@@ -1,0 +1,24 @@
+.navbar {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__list {
+  @include reset-list();
+  display: flex;
+}
+
+.navbar__link {
+  display: block;
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+
+  &:hover {
+    color: #00e0d0;
+  }
+}
