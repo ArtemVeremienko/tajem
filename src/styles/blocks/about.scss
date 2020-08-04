@@ -2,19 +2,26 @@
   color: #413d4b;
 }
 
-.about__container {
+.about__row {
   display: flex;
   padding: 70px 0;
+  margin: 0 -10px;
 }
 
 .about__image {
-  margin-right: 20px;
-  flex-basis: calc(380 / 940 * 100%);
-  max-width: calc(380 / 940 * 100%);
-  flex-shrink: 0;
+  padding: 0 10px;
+  flex: 1 1 calc(5 / 12 * 100%);
+  max-width: calc(5 / 12 * 100%);
+
   display: flex;
   justify-content: center;
   align-items: start;
+}
+
+.about__content {
+  padding: 0 10px;
+  flex: 1 1 calc(7 / 12 * 100%);
+  max-width: calc(7 / 12 * 100%);
 }
 
 .about__title{
