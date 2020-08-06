@@ -1,4 +1,7 @@
 .header {
   color: #fff;
-  background-image: url(../images/overlay.png), url(../images/header-bg.jpg);
+  background-image:
+    url(../images/overlay.png),
+    url(../images/header-bg.jpg);
+  background-size: cover;
 }

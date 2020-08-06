@@ -1,27 +1,18 @@
 .about {
   color: #413d4b;
-}
-
-.about__row {
-  display: flex;
   padding: 70px 0;
-  margin: 0 -10px;
 }
 
 .about__image {
-  padding: 0 10px;
-  flex: 1 1 calc(5 / 12 * 100%);
-  max-width: calc(5 / 12 * 100%);
+  @include make-col(5);
 
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .about__content {
-  padding: 0 10px;
-  flex: 1 1 calc(7 / 12 * 100%);
-  max-width: calc(7 / 12 * 100%);
+  @include make-col(7);
 }
 
 .about__title{

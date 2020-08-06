@@ -3,12 +3,13 @@
   background-image:
     url('../images/overlay.png'),
     url('../images/video-bg.jpg');
+  background-size: cover;
   color: #fff;
 }
 
 .video__trailer {
   display: block;
-  height: 550px;
+  min-height: 550px;
   margin: 0 auto;
 }
 

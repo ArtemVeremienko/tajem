@@ -1,0 +1,95 @@
+.expertise {
+  color: $header-gray;
+  padding: 70px 0;
+}
+
+.expertise__title {
+  margin: 0 auto;
+  font-family: PlayfairDisplay, sans-serif;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.expertise__description {
+  margin: 18px auto 65px;
+  position: relative;
+  color: #6d6d6d;
+  text-align: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50px;
+    height: 2px;
+    transform: translate(-50%, 18px);
+    opacity: 0.3;
+    background-color: #413d4b;
+  }
+}
+
+.expertise__list {
+  @include reset-list;
+}
+
+.expertise__item {
+  @include make-col(4);
+  padding: 100px 30px 30px;
+  position: relative;
+  text-align: center;
+
+  &:not(:nth-child(3n)) {
+    border-right: 1px solid black;
+  }
+
+  &:nth-child(-n+3) {
+    border-bottom: 1px solid black;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, 30px);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--web::before {
+    background-image: url('../images/icon-display.png');
+  }
+  &--brand::before {
+    background-image: url('../images/icon-brush.png');
+  }
+  &--mobile::before {
+    background-image: url('../images/icon-phone.png');
+  }
+  &--search::before {
+    background-image: url('../images/icon-chart.png');
+  }
+  &--game::before {
+    background-image: url('../images/icon-game.png');
+  }
+  &--love::before {
+    background-image: url('../images/icon-heart.png');
+  }
+}
+
+.expertise__name {
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.expertise__text {
+  font-size: 14px;
+  font-weight: 300;
+  color: #333;
+}

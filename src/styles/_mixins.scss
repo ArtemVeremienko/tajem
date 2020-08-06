@@ -3,3 +3,8 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin make-col($size) {
+  flex: percentage($size / $columns);
+  max-width: percentage($size / $columns);
+}
