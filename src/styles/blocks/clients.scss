@@ -1,0 +1,27 @@
+.clients {
+  padding: 70px 10px;
+  @include make-col(5);
+  color: $header-gray;
+}
+
+.clients__title {
+  @include header;
+  margin-bottom: 45px;
+}
+
+.clients__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.clients__item {
+  flex: 50%;
+  margin-bottom: 40px;
+  text-align: center;
+
+  &:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+}
