@@ -1,0 +1,115 @@
+.testimonials {
+  padding: 70px 0;
+  text-align: center;
+  background-image:
+    url('../images/overlay.png'),
+    url('../images/testimonials-bg.png');
+  background-size: cover;
+  color: #fff;
+}
+
+.testimonials__quote-list {
+  @include reset-list;
+  margin-bottom: 45px;
+}
+
+.testimonial__quote-item {
+  position: relative;
+  padding-top: 65px;
+  padding-left: 85px;
+  padding-right: 85px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 26px;
+    top: 0;
+    background-image: url(../images/quotation_mark.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.testimonials__quote {
+  margin: 0;
+  margin-bottom: 50px;
+  font-family: PlayfairDisplay, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  opacity: 0.85;
+}
+
+.testimonials__author {
+  margin-bottom: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.testimonials__proffesion {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 300;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.testimonials__indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials__indicator-list {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+}
+
+.testimonials__indicator-item {
+  flex: none;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 14px;
+  }
+}
+
+.testimonials__button {
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  font-size: 0;
+  border-color: gray;
+
+  &--prev {
+    order: -1;
+    margin-right: 20px;
+    transform: rotate(-45deg);
+    border-bottom: none;
+    border-right: none;
+
+    &:hover {
+      transform: rotate(-45deg) scale(1.2);
+    }
+  }
+
+  &--next {
+    margin-left: 20px;
+    transform: rotate(45deg);
+    border-left: none;
+    border-bottom: none;
+
+    &:hover {
+      transform: rotate(45deg) scale(1.2);
+    }
+  }
+
+  &:hover {
+    background-color: transparent;
+    border-color: #fff;
+  }
+}
+

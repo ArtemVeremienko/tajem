@@ -17,7 +17,6 @@
   font-family: PlayfairDisplay, sans-serif;
   font-size: 22px;
   font-weight: 700;
-  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -66,5 +65,9 @@
 
   &:nth-child(n+7):nth-child(even) {
     background-color: gray;
+  }
+
+  img {
+    object-fit: contain;
   }
 }
