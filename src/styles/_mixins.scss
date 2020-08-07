@@ -4,7 +4,16 @@
   list-style: none;
 }
 
+@mixin header {
+  margin: 0;
+  font-family: PlayfairDisplay, sans-serif;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 @mixin make-col($size) {
-  flex: percentage($size / $columns);
+  flex: 0 percentage($size / $columns);
   max-width: percentage($size / $columns);
 }

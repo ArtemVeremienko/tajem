@@ -1,0 +1,25 @@
+.contact-form {
+  margin-right: auto;
+  padding: 70px 10px;
+  @include make-col(6);
+  color: $header-gray;
+}
+
+.contact-form__title {
+  @include header;
+  margin-bottom: 30px;
+}
+
+.contact-form__input {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #0000001a;
+  font: inherit;
+}
+
+.contact-form__textarea {
+  min-height: 200px;
+  max-height: 400px;
+  resize: vertical;
+}

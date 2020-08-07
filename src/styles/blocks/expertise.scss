@@ -1,23 +1,17 @@
 .expertise {
   color: $header-gray;
   padding: 70px 0;
+  text-align: center;
 }
 
 .expertise__title {
-  margin: 0 auto;
-  font-family: PlayfairDisplay, sans-serif;
-  font-size: 22px;
-  line-height: 1.2;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
+  @include header;
 }
 
 .expertise__description {
   margin: 18px auto 65px;
   position: relative;
   color: #6d6d6d;
-  text-align: center;
 
   &::after {
     content: '';
@@ -40,7 +34,7 @@
   @include make-col(4);
   padding: 100px 30px 30px;
   position: relative;
-  text-align: center;
+
 
   &:not(:nth-child(3n)) {
     border-right: 1px solid black;

@@ -13,11 +13,7 @@
 }
 
 .works__title {
-  margin: 0;
-  font-family: PlayfairDisplay, sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  text-transform: uppercase;
+  @include header;
 }
 
 .works__more {
@@ -51,7 +47,7 @@
 }
 
 .works__item {
-  flex: calc(100% / 6);
+  flex: 0 calc(100% / 6);
   height: 200px;
   background-color: gray;
 
