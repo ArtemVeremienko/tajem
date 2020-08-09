@@ -3,33 +3,47 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="styles/index.css">
-  <title>Document</title>
+  <title>Tajem</title>
 </head>
 
 <body>
   <header class="header">
     <div class="container">
 
+      <nav class="navbar">
 
-      <div class="navbar">
         <a class="navbar__logo">
           <img src="images/logo.png" width="128" height="50" alt="tajem logo">
         </a>
 
-        <nav class="navbar__menu">
-          <ul class="navbar__list">
-            <li class="navbar__item"><a class="navbar__link" href="#">Home</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="#">About</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="#">Expertise</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="#">Teams</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="#">Works</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="#">People say</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+        <button class="button navbar__button">Open menu</button>
+
+        <ul class="navbar__list">
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">About</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Expertise</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Teams</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Works</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">People say</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
 
       <div class="carousel">
         <ol class="carousel__indicators">
@@ -351,7 +365,7 @@
         </section>
       </div>
 
-      <div class="row">
+      <div class="row footer__second-row">
         <ul class="footer__menu-list">
           <li class="footer__menu-item">
             <a class="footer__menu-link" href="#">Help</a>
@@ -368,6 +382,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="scripts/index.js"></script>
 </body>
 
 </html>

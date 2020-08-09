@@ -1,14 +1,111 @@
 .navbar {
-  padding: 15px 0;
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
+}
+
+.navbar__button {
+  display: none;
+  font-size: 0;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  padding: 17px 0;
+  background-color: currentColor;
+  background-clip: content-box;
+  border:none;
+  transition: background-color 1s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: currentColor;
+    transition: all 0.6s;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: 33px;
+  }
+
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+.navbar__button--active {
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    top: 15px;
+    transition: top 0.6s, transform 0.6s 0.6s;
+  }
+
+  &::before {
+    transform: rotate(-45deg) scaleX(1.2);
+  }
+
+  &::after {
+    transform: rotate(45deg) scaleX(1.2);
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .navbar__button {
+    display: inline-block;
+  }
 }
 
 .navbar__list {
   @include reset-list();
   display: flex;
   flex-wrap: wrap;
+  transition: all 0.6s;
+}
+
+
+
+@media (max-width: $tablet-breakpoint) {
+  .navbar__list {
+    @include make-col(7);
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .navbar__list {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    left: 0;
+    max-width: 100%;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .navbar--open .navbar__list {
+  opacity: 1;
+  visibility: visible;
+}
 }
 
 .navbar__link {
@@ -20,6 +117,6 @@
   font-weight: 900;
 
   &:hover {
-    color: #00e0d0;
+    color: $accent;
   }
 }

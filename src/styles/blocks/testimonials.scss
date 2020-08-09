@@ -25,9 +25,18 @@
     width: 32px;
     height: 26px;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background-image: url(../images/quotation_mark.png);
     background-position: center;
     background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .testimonial__quote-item {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 

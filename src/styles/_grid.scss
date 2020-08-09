@@ -5,6 +5,19 @@
   padding: 0 ($grid-gutter / 2);
 }
 
+@media (max-width: $tablet-breakpoint) {
+  .container {
+    max-width: $tablet-container;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .container {
+    width: $mobile-container;
+    margin: 0 auto;
+  }
+}
+
 .row {
   display: flex;
   flex-flow: row wrap;

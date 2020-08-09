@@ -5,6 +5,13 @@
   color: $header-gray;
 }
 
+@media (max-width: $tablet-breakpoint) {
+  .contact-form {
+    @include make-col(12);
+    text-align: center;
+  }
+}
+
 .contact-form__title {
   @include header;
   margin-bottom: 30px;
