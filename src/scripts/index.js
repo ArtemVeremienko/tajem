@@ -5,5 +5,5 @@ const navbarButton = document.querySelector('.navbar__button');
 
 navbarButton.onclick = () => {
   navbar.classList.toggle('navbar--open');
-  navbarButton.calssList.toggle('navbar__button--active');
+  navbarButton.classList.toggle('navbar__button--active');
 }
