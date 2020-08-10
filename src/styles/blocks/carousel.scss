@@ -4,14 +4,14 @@
 }
 
 .carousel__indicators {
+  @include reset-list;
   position: absolute;
   bottom: 70px;
   left: 50%;
   display: flex;
   transform: translateX(-50%);
-  @include reset-list;
 
-  & li {
+  li {
     width: 10px;
     height: 10px;
     margin-right: 5px;
@@ -19,13 +19,19 @@
     border-radius: 50%;
     font-size: 0;
     cursor: pointer;
+    transition: all 0.6s;
+
+    &:hover {
+      transform: scale(1.2);
+      border-color: $accent;
+    }
   }
 
-  & li:last-child {
+  li:last-child {
     margin-right: 0;
   }
 
-  & li.active {
+  li.active {
     background-color: $accent;
   }
 }
@@ -37,16 +43,28 @@
   padding: 100px 0 205px;
 }
 
+@media (max-width: $mobile-breakpoint) {
+  .carousel__inner {
+    padding: 50px 0 120px;
+  }
+}
+
 .carousel__title {
   margin: 50px 0;
   font-family: 'Playfair Display', sans-serif;
   font-weight: 900;
-  text-align: center;
+  line-height: 1.2;
   text-transform: capitalize;
 }
 
+@media (max-width: $mobile-breakpoint) {
+  .carousel__title {
+    margin-top: 0;
+  }
+}
+
 .carousel__description {
-  text-align: center;
+  padding: 0 10px;
   font-weight: 300;
   margin-bottom: 45px;
 }

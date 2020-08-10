@@ -13,7 +13,7 @@
 
 @media (max-width: $mobile-breakpoint) {
   .container {
-    width: $mobile-container;
+    max-width: $mobile-container;
     margin: 0 auto;
   }
 }

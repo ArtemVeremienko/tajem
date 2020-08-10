@@ -93,6 +93,12 @@
   background-image: url('../images/icon_phone.png');
 }
 
+@media (max-width: $mobile-breakpoint) {
+  .footer__address::before {
+    left: 15px;
+    top: 10px;
+  }
+}
 
 .footer__form {
   margin-bottom: 25px;
@@ -102,6 +108,7 @@
 
 .footer__input {
   padding: 14px 24px;
+  color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.5);
   background: transparent;
 }
@@ -140,9 +147,10 @@
   font-size: 0;
   background-position: center;
   background-repeat: no-repeat;
+  transition: all 0.6s;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
   }
 
   &--facebook {
@@ -173,6 +181,13 @@
   padding-right: 10px;
 }
 
+@media (max-width: $mobile-breakpoint) {
+  .footer__menu-list {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+
 .footer__menu-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -181,6 +196,11 @@
   color: inherit;
   letter-spacing: 0.025em;
   text-transform: uppercase;
+  transition: all 0.6s;
+
+  &:hover {
+    color: $accent;
+  }
 }
 
 .footer__copyright {

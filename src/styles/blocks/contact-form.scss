@@ -8,7 +8,16 @@
 @media (max-width: $tablet-breakpoint) {
   .contact-form {
     @include make-col(12);
+    margin-left: 20px;
+    margin-right: 20px;
     text-align: center;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .contact-form {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -22,6 +31,7 @@
   padding: 10px 20px;
   margin-bottom: 20px;
   border: 1px solid #0000001a;
+  color: inherit;
   font: inherit;
 }
 
@@ -29,6 +39,13 @@
   min-height: 200px;
   max-height: 400px;
   resize: vertical;
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .contact-form__textarea {
+    min-height: 150px;
+    max-height: 300px;
+  }
 }
 
 .contact-form__button {

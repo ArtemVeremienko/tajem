@@ -35,8 +35,8 @@
 
 @media (max-width: $mobile-breakpoint) {
   .testimonial__quote-item {
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -78,11 +78,18 @@
 }
 
 .testimonials__indicator-item {
-  flex: none;
+  // flex: none;
   cursor: pointer;
 
   &:not(:last-child) {
     margin-right: 14px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .testimonials__indicator-item:first-child,
+  .testimonials__indicator-item:last-child {
+    display: none;
   }
 }
 
@@ -122,3 +129,12 @@
   }
 }
 
+@media (max-width: $mobile-breakpoint) {
+  .testimonials__button {
+    &--prev,
+    &--next {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}

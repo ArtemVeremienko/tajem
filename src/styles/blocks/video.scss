@@ -13,6 +13,12 @@
   margin: 0 auto;
 }
 
+@media (max-width: $mobile-breakpoint) {
+  .video__trailer {
+    min-height: 350px;
+  }
+}
+
 .video__control {
   position: absolute;
   top: 50%;
